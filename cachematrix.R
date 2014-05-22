@@ -1,7 +1,6 @@
 ## The following two functions was to create a matrix and solve its inverse.
 
-## The makeCacheMatrix function was to create a matrix. It aims to 1)set the value of the matrix, 2)get the value of the matrix, 3)set the value of the inverse, and 4)get the value of the inverse.
-
+## The makeCacheMatrix function was to create a matrix that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
 	inv<-NULL
 	set<-function(y){
@@ -18,8 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The following function caculates the inverse of a special matrix.
-But before it caculates the inverse, it will first check to see whether the inverse was already caculated. If so, it will get the inverse and skip the computation. Otherwise, it will caculate the inverse using the setinverse function.
+## Caculates the inverse of a special matrix.If the inverse has been caculated, the function will return the value of the inverse.
 
 cacheSolve <- function(x, ...) {
 	inv<-x$getinverse()
